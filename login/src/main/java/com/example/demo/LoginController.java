@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -8,11 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 	
 	@RequestMapping("/")
-	public ModelAndView login()
+	public String login(Model m)
 	{
-        ModelAndView mv=new ModelAndView();
-        mv.setViewName("login");
-		return mv;
+        return "login";
 	}
 	
 	
